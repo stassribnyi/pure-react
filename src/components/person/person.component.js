@@ -17,8 +17,8 @@ const PersonName = props => {
 export const Person = props => {
   return React.createElement('div', { className: 'person' }, [
     React.createElement('img', {
-      key: props.picture.thumbnail,
-      src: props.picture.thumbnail,
+      key: props.picture.medium,
+      src: props.picture.medium,
       className: 'person__img'
     }),
     React.createElement(PersonName, { key: props.id.value, ...props.name }),
