@@ -1,7 +1,19 @@
 export const Person = props => {
   return React.createElement(
-    'h2',
-    null,
-    `${props.name.first} ${props.name.last}`
+    'div',
+    { className: 'person' },
+    React.createElement('h2', { className: 'person__name' }, [
+      React.createElement(
+        'span',
+        { key: props.name.first, className: 'person__first-name' },
+        props.name.first
+      ),
+      ' ',
+      React.createElement(
+        'span',
+        { key: props.name.last, className: 'person__last-name' },
+        props.name.last
+      )
+    ])
   );
 };

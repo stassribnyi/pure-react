@@ -25,14 +25,14 @@ export class App extends React.Component {
       [
         React.createElement(
           'h1',
-          { className: 'app__header', key: 0 },
+          { key: 'app', className: 'app__header' },
           'People list'
         ),
         React.createElement(
           'section',
-          { className: 'app__people' },
-          this.state.people.map((person, i) =>
-            React.createElement(Person, { key: i + 1, ...person })
+          { key: 'app__people', className: 'app__people' },
+          this.state.people.map((person) =>
+            React.createElement(Person, { key: person.email, ...person })
           )
         )
       ]
